@@ -1,6 +1,9 @@
 # AutoWatermark
 AutoWatermark is a GUI application to automate the watermarking process for a batch of images depends on their brightness. It allows users to select JPG images, white and black watermark PNGs, and apply them automatically to the images at selected positions with the specified size ratio.
 
+Demo video:
+![Demo](./Assets/demo.gif)
+
 ## Features
 * Select a folder containing JPG images to be watermarked.
 * Select white and black watermark PNG files.

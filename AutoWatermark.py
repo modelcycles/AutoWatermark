@@ -1,6 +1,7 @@
 import cv2, os, sys
 import numpy as np
 from glob import glob
+import PyQt5
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PIL import Image
@@ -99,6 +100,10 @@ class MainWindow(QWidget, Ui_MainWindow):
     def button0Clicked(self):
         fname = QFileDialog.getExistingDirectory(self, "Select Folder", "")
         self.images = glob(f"{fname}/*.jpg")
+        self.images = glob(f"{fname}/*.jpeg") + self.images
+        self.images = glob(f"{fname}/*.JPG") + self.images
+        self.images = glob(f"{fname}/*.JPEG") + self.images
+        print(self.images)
         self.text.append(f"JPG folder selected: {fname}")
 
     def button1Clicked(self):

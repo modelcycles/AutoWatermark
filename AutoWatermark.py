@@ -23,7 +23,6 @@ class MainWindow(QWidget, Ui_MainWindow):
         self.show()
 
     def initUI(self):
-        self.image_dir = ""
         self.images = []
         self.white = None
         self.black = None
@@ -206,16 +205,6 @@ class MainWindow(QWidget, Ui_MainWindow):
 
             with open(item, "wb") as f:
                 result_image.save(f, **info)
-
-            # extension = os.path.splitext(item)[1]
-
-            # result, encoded_img = cv2.imencode(extension, img)
-
-            # if result:
-            #     with open(item, mode="w+b") as f:
-            #         encoded_img.tofile(f)
-            # elif:
-            #     self.text.append(f"Failed to write image: {item}")
 
 
 if __name__ == "__main__":
